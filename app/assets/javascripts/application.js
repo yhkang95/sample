@@ -15,12 +15,12 @@
 //= require turbolinks
 //= require react
 //= require react_ujs
+//= require react_router
 //= require components
 //= require_tree .
 
-var App = require('components/App');
+var routes = require('components/routes');
 
-React.render(
-  <App />,
-  document.getElementById('content')
-);
+ReactRouter.run(routes, function (Handler) {
+  React.render(<Handler/>, document.body);
+});

@@ -10,7 +10,8 @@ module.exports = React.createClass({
           <Link to='/comments'>Comments</Link>
           <Link to='/posts'>Posts</Link>
         </div>
-        <h1>Hello world!</h1>
+        <h1>윤수 생일축하해!</h1>
+        <img src='assets/yoonsoo.jpg' />
         <RouteHandler />
       </div>
     );

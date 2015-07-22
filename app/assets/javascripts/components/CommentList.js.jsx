@@ -20,7 +20,6 @@ module.exports = React.createClass({
       success: function(response) {
         console.log('success', response);
         this.setState({comments: response});
-        this.transitionTo('/posts');
       }.bind(this),
       error: function(response) {
         console.log('error', response);

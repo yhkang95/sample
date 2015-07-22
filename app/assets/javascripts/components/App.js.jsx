@@ -3,15 +3,20 @@ var RouteHandler = ReactRouter.RouteHandler,
 
 module.exports = React.createClass({
 
+  mixins: [ReactRouter.Navigation],  
+
+  goToComments: function() {
+    this.transitionTo('/comments');
+  },
+
   render: function() {
     return (
       <div>
         <div>
-          <Link to='/comments'>Comments</Link>
+          <h1 onClick={this.goToComments}>Comments</h1>
           <Link to='/posts'>Posts</Link>
         </div>
-        <h1>윤수 생일축하해!</h1>
-        <img src='assets/yoonsoo.jpg' />
+        <h1>hello world!</h1>
         <RouteHandler />
       </div>
     );
